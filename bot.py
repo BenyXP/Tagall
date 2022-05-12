@@ -22,33 +22,33 @@ moment_worker = []
 
 
 #start
-@decodebot.on(events.NewMessage(pattern="^/start$"))
+@decodebot.on(events.NewMessage(pattern="^/kontolgaceng$"))
 async def start(event):
-  await event.reply("^_^ Hey, Welcome To TAG Help Bot's Menu\nI can tag 15,000 Members in Group and 300 Members In Channel.\nNeed Help /help ",
+  await event.reply("^ _ ^ Hai, Selamat Datang di TAG Menu Bantuan Bot\nSaya dapat menandai 15.000 Anggota di Grup dan 300 Anggota Di Saluran.\nPerlu Bantuan /help ",
                     buttons=(
                       [
-                         Button.url('📣 UPDATES', 'https://t.me/DeeCodeBots'), 
-                         Button.url('⭐SUPPORT', 'https://t.me/DeCodeSupport'), 
+                         Button.url('📣 UPDATES', 'https://t.me/sintureveryday'), 
+                         Button.url('⭐SUPPORT', 'https://t.me/pantekyks'), 
                       ], 
                       [
-                        Button.url('➕ ADD ME TO YOUR GROUP', 'https://t.me/MEMBER_TAGERBOT?startgroup=true'),   
+                        Button.url('➕  Tambahkan Saya Ke Group Anda', 'https://t.me/OukeenMusicBot?startgroup=true'),   
                       ]
                    ), 
                     link_preview=False
                    )
 
 #help
-@decodebot.on(events.NewMessage(pattern="^/help$"))
+@decodebot.on(events.NewMessage(pattern="^/idiotanjing$"))
 async def help(event):
-  helptext = "**Tag Help Bot's Help Menu**\n\nCommand: /all \n You can use this command with text you want to tell others. \n`Example: /all Good morning!` \nYou can use this command as an answer. any message Bot will tag users to replied message"
+  helptext = "**Menu Bantuan Bot Bantuan Tag**\n\nPerintah: /all \n Anda dapat menggunakan perintah ini dengan teks yang ingin Anda sampaikan kepada orang lain. \n`Contoh: /all Selamat pagi!` \nAnda dapat menggunakan perintah ini sebagai jawaban. pesan apa pun Bot akan menandai pengguna untuk membalas Pesan
   await event.reply(helptext,
                     buttons=(
                       [
-                         Button.url('📣 UPDATES', 'https://t.me/DeeCodeBots'), 
-                         Button.url('⭐SUPPORT', 'https://t.me/DeCodeSupport'), 
+                         Button.url('📣 UPDATES', 'https://t.me/sintureveryday'), 
+                         Button.url('⭐SUPPORT', 'https://t.me/pantekyks'), 
                       ], 
                       [
-                        Button.url('➕ ADD ME TO YOUR GROUP', 'https://t.me/MEMBER_TAGERBOT?startgroup=true'),   
+                        Button.url('➕ TAMBAH SAYA KE GROUP MU', 'https://t.me/OukeenMusicBot?startgroup=true'),   
                       ]
                    ), 
                     link_preview=False
@@ -63,13 +63,13 @@ async def help(event):
 async def mentionall(event):
   global moment_worker
   if event.is_private:
-    return await event.respond("Use This In Channel or Group!")
+    return await event.respond("Gunakan Ini Di Group Atau Channel Anda")
   
   admins = []
   async for admin in decodebot.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("Only Admin can use it.")
+    return await event.respond("Hanya Admin Yang Dapat Menggunakan Ini.")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -78,11 +78,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("I can't Mention Members for Old Post!")
+        return await event.respond("Saya tidak dapat Menyebut Anggota untuk Postingan Lama!")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("Give me can an Argument. Ex: `/tag Hey, Where are you`")
+    return await event.respond("Beri saya bisa Argumen. Contoh: `/tag Hei, Dimana kamu`")
   else:
-    return await event.respond("Reply to Message or Give Some Text To Mention!")
+    return await event.respond("Balas Pesan atau Berikan Beberapa Teks Untuk Disebutkan!")
     
   if mode == "text_on_cmd":
     moment_worker.append(event.chat_id)
@@ -130,11 +130,11 @@ async def cancel_spam(event):
       spam_chats.remove(event.chat_id)
     except:
       pass
-    return await event.respond('**__Stoped__**\n\n**__Powered By:__ @TeamDeeCode**')
+    return await event.respond('**__Stoped__**\n\n**__Powered By:__ @sintureveryday**')
 
 
 
 
 print("Started Successfully Join Support")
-print("¯\_(ツ)_/¯ Need Help Join @DeCodeSupport")
+print("¯\_(ツ)_/¯ Need Help? Usaha Kontol")
 decodebot.run_until_disconnected()
