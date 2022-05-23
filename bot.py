@@ -40,7 +40,7 @@ async def start(event):
 #help
 @decodebot.on(events.NewMessage(pattern="^/idiotanjing$"))
 async def help(event):
-  helptext = "**Menu Bantuan Bot Bantuan Tag**\n\nPerintah: /all \n Anda dapat menggunakan perintah ini dengan teks yang ingin Anda sampaikan kepada orang lain. \n`Contoh: /all Selamat pagi!` \nAnda dapat menggunakan perintah ini sebagai jawaban. pesan apa pun Bot akan menandai pengguna untuk membalas Pesan
+  helptext = "**Menu Bantuan Bot Bantuan Tag**\n\nPerintah: /all \n Anda dapat menggunakan perintah ini dengan teks yang ingin Anda sampaikan kepada orang lain. \n`Contoh: /all Selamat pagi!` \nAnda dapat menggunakan perintah ini sebagai jawaban. pesan apa pun Bot akan menandai pengguna untuk membalas Pesan"
   await event.reply(helptext,
                     buttons=(
                       [
