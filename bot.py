@@ -27,7 +27,7 @@ async def start(event):
   await event.reply("^ _ ^ Hai, Selamat Datang di TAG Menu Bantuan Bot\nSaya dapat menandai 15.000 Anggota di Grup dan 300 Anggota Di Saluran.\nPerlu Bantuan /help ",
                     buttons=(
                       [
-                         Button.url('📣 UPDATES', 'https://t.me/sintureveryday'), 
+                         Button.url('📣 UPDATES', 'https://t.me/lepinaisy'), 
                          Button.url('⭐SUPPORT', 'https://t.me/pantekyks'), 
                       ], 
                       [
@@ -44,7 +44,7 @@ async def help(event):
   await event.reply(helptext,
                     buttons=(
                       [
-                         Button.url('📣 UPDATES', 'https://t.me/sintureveryday'), 
+                         Button.url('📣 UPDATES', 'https://t.me/lepinaisy'), 
                          Button.url('⭐SUPPORT', 'https://t.me/pantekyks'), 
                       ], 
                       [
@@ -130,7 +130,7 @@ async def cancel_spam(event):
       spam_chats.remove(event.chat_id)
     except:
       pass
-    return await event.respond('**__Stoped__**\n\n**__Powered By:__ @sintureveryday**')
+    return await event.respond('**__Stoped__**\n\n**__Powered By:__ @lepinaisy**')
 
 
 
