@@ -31,7 +31,7 @@ async def start(event):
                          Button.url('⭐SUPPORT', 'https://t.me/pantekyks'), 
                       ], 
                       [
-                        Button.url('➕  Tambahkan Saya Ke Group Anda', 'https://t.me/OukeenMusicBot?startgroup=true'),   
+                        Button.url('➕  Tambahkan Saya Ke Group Anda', 'https://t.me/zenntapibot?startgroup=true'),   
                       ]
                    ), 
                     link_preview=False
@@ -44,11 +44,11 @@ async def help(event):
   await event.reply(helptext,
                     buttons=(
                       [
-                         Button.url('📣 UPDATES', 'https://t.me/lepinaisy'), 
+                         Button.url('🇲🇨 UPDATES', 'https://t.me/typingasfvckk'), 
                          Button.url('⭐SUPPORT', 'https://t.me/pantekyks'), 
                       ], 
                       [
-                        Button.url('➕ TAMBAH SAYA KE GROUP MU', 'https://t.me/OukeenMusicBot?startgroup=true'),   
+                        Button.url('➕ TAMBAH SAYA KE GROUP MU', 'https://t.me/zenntapibot?startgroup=true'),   
                       ]
                    ), 
                     link_preview=False
@@ -130,7 +130,7 @@ async def cancel_spam(event):
       spam_chats.remove(event.chat_id)
     except:
       pass
-    return await event.respond('**__Stoped__**\n\n**__Powered By:__ @lepinaisy**')
+    return await event.respond('**__Stoped__**\n\n**__Powered By:__ @typingasfvckk**')
 
 
 
