@@ -130,8 +130,7 @@ async def cancel_spam(event):
       spam_chats.remove(event.chat_id)
     except:
       pass
-    return await event.respond('**__Stoped__**\n\n**__Powered By:__ @typingasfvckk**')
-
+    return await event.respond('__Stopped. This Bot Made By @typingasfvkk__')
 
 
 
